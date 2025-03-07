@@ -1,0 +1,128 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn2lgt5hv2g75"]
+
+[ext_resource type="Script" uid="uid://cl1leu20rppri" path="res://main.gd" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://bkpm17lmapy6u" path="res://uis/ui_menu.gd" id="2_jyhfs"]
+[ext_resource type="Script" uid="uid://baqcebykx1naf" path="res://uis/ui_message.gd" id="3_tbgi4"]
+[ext_resource type="Script" uid="uid://tmrphlde7yxk" path="res://uis/ui_preferences.gd" id="4_jyhfs"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_sugp2")
+
+[node name="UIMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_jyhfs")
+
+[node name="ButtonConnect" type="Button" parent="UIMenu"]
+layout_mode = 1
+offset_left = 448.0
+offset_top = 256.0
+offset_right = 551.0
+offset_bottom = 287.0
+text = "Connect"
+
+[node name="ButtonPreferences" type="Button" parent="UIMenu"]
+layout_mode = 1
+offset_left = 448.0
+offset_top = 160.0
+offset_right = 551.0
+offset_bottom = 191.0
+text = "Preferences"
+
+[node name="ButtonHost" type="Button" parent="UIMenu"]
+layout_mode = 1
+offset_left = 448.0
+offset_top = 208.0
+offset_right = 551.0
+offset_bottom = 239.0
+text = "Host"
+
+[node name="UIMessage" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_tbgi4")
+
+[node name="ButtonSend" type="Button" parent="UIMessage"]
+layout_mode = 1
+offset_left = 264.0
+offset_top = 368.0
+offset_right = 760.0
+offset_bottom = 399.0
+text = "Send Message"
+
+[node name="TextEdit" type="TextEdit" parent="UIMessage"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 64.0
+offset_right = 760.0
+offset_bottom = 314.0
+
+[node name="LineEdit" type="LineEdit" parent="UIMessage"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 24.0
+offset_right = 760.0
+offset_bottom = 55.0
+
+[node name="Label" type="Label" parent="UIMessage"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 24.0
+offset_right = 304.0
+offset_bottom = 47.0
+text = "Title:"
+
+[node name="UIPreferences" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_jyhfs")
+
+[node name="LabelName" type="Label" parent="UIPreferences"]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 128.0
+offset_right = 449.0
+offset_bottom = 151.0
+text = "User name:"
+
+[node name="LineEditName" type="LineEdit" parent="UIPreferences"]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 128.0
+offset_right = 616.0
+offset_bottom = 159.0
+
+[node name="LabelColor" type="Label" parent="UIPreferences"]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 168.0
+offset_right = 449.0
+offset_bottom = 191.0
+text = "Favourite color:"
+
+[node name="ColorRect" type="ColorRect" parent="UIPreferences"]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 168.0
+offset_right = 616.0
+offset_bottom = 192.0
+
+[node name="ButtonOK" type="Button" parent="UIPreferences"]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 216.0
+offset_right = 616.0
+offset_bottom = 247.0
+text = "OK"
